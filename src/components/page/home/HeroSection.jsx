@@ -15,7 +15,7 @@ import Input from "@/components/ui/Input";
 
 const HeroSection = () => {
   return (
-    <main className="relative bg-[#F8F8FD] pt-22">
+    <section className="relative bg-[#F8F8FD] pt-22">
       <Container>
         <div className="flex relative justify-between items-center lg:pb-0 pb-10">
           {/* Heading & Info */}
@@ -107,7 +107,7 @@ const HeroSection = () => {
           />
         </div>
       </Container>
-    </main>
+    </section>
   );
 };
 
