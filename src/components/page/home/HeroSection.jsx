@@ -15,7 +15,7 @@ import Input from "@/components/ui/Input";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-[#F8F8FD] pt-22">
+    <section className="relative bg-[#F8F8FD] pt-22 lg:[clip-path:polygon(0%_0%,_100%_0%,_100%_88%,_88%_100%,_0%_100%)]">
       <Container>
         <div className="flex relative justify-between items-center lg:pb-0 pb-10">
           {/* Heading & Info */}
@@ -92,7 +92,7 @@ const HeroSection = () => {
             {/* Bottom text */}
             <p className="text-body-16 font-medium lg:mt-30 flex lg:flex-row flex-col">
               <span className="font-normal">Popular : </span>
-              <span>UI Designer, UX Researcher, Android, Admin</span>
+              <span>&nbsp; UI Designer, UX Researcher, Android, Admin</span>
             </p>
           </div>
 

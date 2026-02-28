@@ -11,44 +11,10 @@ import {
   IconFilter,
   IconX,
 } from "@tabler/icons-react";
+import { allJobs } from "@/constants/data";
 
 const JobListingsPage = () => {
   const [showMobileFilters, setShowMobileFilters] = useState(false);
-
-  const jobs = [
-    {
-      id: 1,
-      title: "Social Media Assistant",
-      company: "Nomad",
-      location: "Paris, France",
-      type: "Full-Time",
-      categories: ["Marketing", "Design"],
-    },
-    {
-      id: 2,
-      title: "Brand Designer",
-      company: "Dropbox",
-      location: "San Francisco, USA",
-      type: "Full-Time",
-      categories: ["Design", "Business"],
-    },
-    {
-      id: 3,
-      title: "Interactive Developer",
-      company: "Terraform",
-      location: "Hamburg, Germany",
-      type: "Full-Time",
-      categories: ["Tech", "Marketing"],
-    },
-    {
-      id: 4,
-      title: "Email Marketing Manager",
-      company: "Netguru",
-      location: "Berlin, Germany",
-      type: "Part-Time",
-      categories: ["Marketing"],
-    },
-  ];
 
   const filterContent = (
     <div className="space-y-8">
@@ -154,9 +120,9 @@ const JobListingsPage = () => {
               </div>
 
               {/* Job Cards Stack */}
-              <div className="space-y-4">
-                {jobs.map((job) => (
-                  <LatestJobCard key={job.id} data={job} />
+              <div className="flex flex-col gap-4">
+                {allJobs?.map((job) => (
+                  <LatestJobCard key={job.id} data={job} showApplyBtn={true} />
                 ))}
               </div>
 
@@ -216,7 +182,7 @@ const FilterGroup = ({ title, options }) => (
             type="checkbox"
             className="w-5 h-5 border-neutral-20 accent-primary"
           />
-          <span className="text-body-16 text-neutral-60 group-hover:text-neutral-100 transition-colors">
+          <span className="text-body-16 mt-1.5 text-neutral-60 group-hover:text-neutral-100 transition-colors">
             {opt}
           </span>
         </label>

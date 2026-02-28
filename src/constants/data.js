@@ -88,7 +88,7 @@ export const jobCategories = [
   },
 ];
 
-// --------------------- JOBS
+// --------------------- FEATURED JOBS
 export const featuredJobs = [
   {
     id: 1,
@@ -125,7 +125,7 @@ export const featuredJobs = [
     type: "Full Time",
     description:
       "Pitch is looking for Customer Manager to join marketing t ...",
-    categories: [{ name: "Marketing", color: "orange" }],
+    categories: [{ name: "Marketing", color: "#EB8533" }],
   },
   {
     id: 4,
@@ -136,7 +136,7 @@ export const featuredJobs = [
     type: "Full Time",
     description:
       "Blinkist is looking for Visual Designer to help team desi ...",
-    categories: [{ name: "Design", color: "green" }],
+    categories: [{ name: "Design", color: "#56CDAD" }],
   },
   {
     id: 5,
@@ -147,8 +147,8 @@ export const featuredJobs = [
     type: "Full Time",
     description: "ClassPass is looking for Product Designer to help us...",
     categories: [
-      { name: "Marketing", color: "orange" },
-      { name: "Design", color: "green" },
+      { name: "Marketing", color: "#EB8533" },
+      { name: "Design", color: "#56CDAD" },
     ],
   },
   {
@@ -160,8 +160,8 @@ export const featuredJobs = [
     type: "Full Time",
     description: "Canva is looking for Lead Engineer to help develop n ...",
     categories: [
-      { name: "Design", color: "green" },
-      { name: "Business", color: "purple" },
+      { name: "Design", color: "#56CDAD" },
+      { name: "Business", color: "#4640DE" },
     ],
   },
   {
@@ -172,7 +172,7 @@ export const featuredJobs = [
     location: "Marseille, France",
     type: "Full Time",
     description: "GoDaddy is looking for Brand Strategist to join the team...",
-    categories: [{ name: "Marketing", color: "orange" }],
+    categories: [{ name: "Marketing", color: "#EB8533" }],
   },
   {
     id: 8,
@@ -182,7 +182,7 @@ export const featuredJobs = [
     location: "San Diego, US",
     type: "Full Time",
     description: "Twitter is looking for Data Analyst to help team desi ...",
-    categories: [{ name: "Technology", color: "red" }],
+    categories: [{ name: "Technology", color: "#FF6550" }],
   },
 ];
 
@@ -260,5 +260,46 @@ export const latestJobs = [
     logo: CompanyLogo8,
     type: "Full-Time",
     categories: ["Marketing", "Design"],
+  },
+];
+
+// --------------------- JOBS FILTER
+
+export const allJobs = [
+  {
+    id: 1,
+    title: "Social Media Assistant",
+    logo: CompanyLogo1,
+    company: "Nomad",
+    location: "Paris, France",
+    type: "Full-Time",
+    categories: ["Marketing", "Design"],
+  },
+  {
+    id: 2,
+    title: "Brand Designer",
+    logo: CompanyLogo2,
+    company: "Dropbox",
+    location: "San Francisco, USA",
+    type: "Full-Time",
+    categories: ["Design", "Business"],
+  },
+  {
+    id: 3,
+    title: "Interactive Developer",
+    logo: CompanyLogo3,
+    company: "Terraform",
+    location: "Hamburg, Germany",
+    type: "Full-Time",
+    categories: ["Tech", "Marketing"],
+  },
+  {
+    id: 4,
+    title: "Email Marketing Manager",
+    logo: CompanyLogo4,
+    company: "Netguru",
+    location: "Berlin, Germany",
+    type: "Part-Time",
+    categories: ["Marketing"],
   },
 ];
