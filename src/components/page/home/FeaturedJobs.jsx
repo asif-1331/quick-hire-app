@@ -1,42 +1,41 @@
-import SectionTitle from "@/components/common/SectionTitle";
 import React from "react";
 
-import { jobCategories } from "@/constants/data";
+import { featuredJobs } from "@/constants/data";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 
 import { IconArrowNarrowRight } from "@tabler/icons-react";
-import CategoryCard from "@/components/common/CategoryCard";
 import Container from "@/components/common/Container";
+import SectionTitle from "@/components/common/SectionTitle";
+import JobCard from "@/components/common/JobCard";
 
-const CategoriesSection = () => {
+const FeaturedJobs = () => {
   return (
     <Container>
-      <section>
-        {/* Header */}
+      <section className="lg:py-[72px] md:py-12 py-10">
         <SectionTitle
-          titleBlack={"Explore by"}
-          titleBlue={"category"}
+          titleBlack={"Featured"}
+          titleBlue={"jobs"}
           btnTitle={"Show all jobs"}
           btnPath={"/jobs"}
         />
 
         <div className="md:pt-12 pt-6 pb-[72px]">
-          {/* Categories */}
-          <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8">
-            {jobCategories?.map((item, index) => (
-              <CategoryCard data={item} key={index} />
+          <div className="flex sm:grid xl:grid-cols-4 sm:grid-cols-2 overflow-x-auto flex-nowrap gap-8 pb-4">
+            {featuredJobs?.map((item, index) => (
+              <div key={index} className="max-w-75 sm:min-w-full shrink-0">
+                <JobCard data={item} />
+              </div>
             ))}
           </div>
 
-          {/* Show more btn */}
           <Button
             className={
               "py-0! px-0! mt-6 gap-4 lg:hidden hover:border-transparent!"
             }
             showBgColor={false}
           >
-            <Link href={""}>Show all jobs</Link>
+            <Link href={"/jobs"}>Show all jobs</Link>
             <IconArrowNarrowRight stroke={2} size={24} />
           </Button>
         </div>
@@ -45,4 +44,4 @@ const CategoriesSection = () => {
   );
 };
 
-export default CategoriesSection;
+export default FeaturedJobs;
