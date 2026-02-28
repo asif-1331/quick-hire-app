@@ -29,13 +29,13 @@ const Navbar = () => {
             {/* Desktop Navigation Links */}
             <div className="hidden lg:flex items-center gap-8">
               <Link
-                href="#"
+                href="/jobs"
                 className="hover:text-primary transition-colors text-neutral-80 font-medium"
               >
                 Find Jobs
               </Link>
               <Link
-                href="#"
+                href="/jobs"
                 className="hover:text-primary transition-colors text-neutral-80 font-medium"
               >
                 Browse Companies
@@ -46,10 +46,12 @@ const Navbar = () => {
           {/* Right: Desktop Auth Buttons */}
           <div className="hidden lg:flex items-center gap-4">
             <Button showBgColor={false} className="text-primary font-bold">
-              Login
+              <Link href="/auth/login">Login</Link>
             </Button>
             <div className="h-6 w-px bg-neutral-20" />
-            <Button>Sign Up</Button>
+            <Button>
+              <Link href="/auth/sign-up">Sign Up</Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Toggle Button */}
@@ -70,14 +72,14 @@ const Navbar = () => {
         >
           <div className="flex flex-col p-6 gap-6">
             <Link
-              href="#"
+              href="/jobs"
               className="text-body-18 font-medium text-neutral-80"
               onClick={() => setIsOpen(false)}
             >
               Find Jobs
             </Link>
             <Link
-              href="#"
+              href="/jobs"
               className="text-body-18 font-medium text-neutral-80"
               onClick={() => setIsOpen(false)}
             >
@@ -86,9 +88,11 @@ const Navbar = () => {
             <hr className="border-neutral-20" />
             <div className="flex flex-col gap-4">
               <Button showBgColor={false} className="w-full justify-center">
-                Login
+                <Link href="/auth/login">Login</Link>
               </Button>
-              <Button className="w-full justify-center">Sign Up</Button>
+              <Button className="w-full justify-center">
+                <Link href="/auth/sign-up">Sign Up</Link>
+              </Button>
             </div>
           </div>
         </div>
