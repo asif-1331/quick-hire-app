@@ -18,13 +18,16 @@ const SignUpSection = () => {
             Start posting jobs for only $10.
           </p>
 
-          <Button
-            className={
-              "bg-white! text-primary! lg:inline-flex! flex! lg:w-auto w-full items-center justify-center"
-            }
-          >
-            <Link href="/auth/sign-up">Sign Up For Free</Link>
-          </Button>
+          {/* Sign up btn */}
+          <Link href="/auth/sign-up">
+            <Button
+              className={
+                "bg-white! text-primary! lg:inline-flex! flex! lg:w-auto w-full items-center justify-center"
+              }
+            >
+              Sign Up For Free
+            </Button>
+          </Link>
         </div>
 
         {/* Dashboard Img */}

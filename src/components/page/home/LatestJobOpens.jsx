@@ -16,7 +16,7 @@ const LatestJobOpens = () => {
         <section className="lg:py-18 md:py-12 pt-24 pb-10 relative z-50">
           <SectionTitle
             titleBlack={"Latest"}
-            titleBlue={"jobs"}
+            titleBlue={"jobs open"}
             btnTitle={"Show all jobs"}
             btnPath={"/jobs"}
           />

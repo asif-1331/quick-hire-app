@@ -45,13 +45,15 @@ const Navbar = () => {
 
           {/* Right: Desktop Auth Buttons */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button showBgColor={false} className="text-primary font-bold">
-              <Link href="/auth/login">Login</Link>
-            </Button>
+            <Link href="/auth/login">
+              <Button showBgColor={false} className="text-primary font-bold">
+                Login
+              </Button>
+            </Link>
             <div className="h-6 w-px bg-neutral-20" />
-            <Button>
-              <Link href="/auth/sign-up">Sign Up</Link>
-            </Button>
+            <Link href="/auth/sign-up">
+              <Button>Sign Up</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle Button */}

@@ -135,7 +135,7 @@ const JobListingsPage = () => {
 
             {/* Main Listings */}
             <main className="lg:col-span-9">
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4!">
                 <div>
                   <h2 className="text-body-24 font-bold text-neutral-100">
                     All Jobs
