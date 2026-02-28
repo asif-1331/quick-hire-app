@@ -39,7 +39,7 @@
   @apply font-clash text-5xl leading-[1.1]
 }
 @utility text-heading-3 {
-  @apply font-clash text-[2rem] leading-[1.2]
+  @apply font-clash text-[32px] leading-[1.2]
 }
 @utility text-display-2 {
   @apply font-sans text-xl leading-[1.2]
