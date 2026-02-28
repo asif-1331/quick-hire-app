@@ -1,47 +1,99 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Container from "./Container";
 import Image from "next/image";
 import Link from "next/link";
+import { IconMenu2, IconX } from "@tabler/icons-react"; // Using Tabler icons like your other components
 
 // Image
 import MainLogo from "../../assets/imgs/Logo.png";
-
 import Button from "../ui/Button";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="fixed top-0 left-0 z-[1000] w-full bg-white/60">
+    <header className="fixed top-0 left-0 z-[1000] w-full bg-white/80 backdrop-blur-sm ">
       <Container>
-        <nav className="flex justify-between items-center">
+        <nav className="flex justify-between items-center h-20">
+          {/* Left: Logo & Desktop Links */}
           <div className="flex items-center gap-12">
-            <div>
-              <Image src={MainLogo} className="lg:w-[152px]" alt="Quick Hire" />
-            </div>
-            <div className="flex items-center gap-4 py-6">
+            <Link href="/">
+              <Image
+                src={MainLogo}
+                className="w-[120px] lg:w-[152px]"
+                alt="Quick Hire"
+              />
+            </Link>
+
+            {/* Desktop Navigation Links */}
+            <div className="hidden lg:flex items-center gap-8">
               <Link
-                href={"#"}
-                className="cursor-pointer hover:text-primary transition-all duration-100 ease-in text-neutral-80 font-sans font-medium"
+                href="#"
+                className="hover:text-primary transition-colors text-neutral-80 font-medium"
               >
                 Find Jobs
               </Link>
               <Link
-                href={"#"}
-                className="cursor-pointer hover:text-primary transition-all duration-100 ease-in text-neutral-80 font-sans font-medium"
+                href="#"
+                className="hover:text-primary transition-colors text-neutral-80 font-medium"
               >
                 Browse Companies
               </Link>
             </div>
           </div>
-          <div className="py-3.5 gap-4 flex">
-            <Button showBgColor={false}>Login</Button>
 
-            <hr className="h-auto w-px border-none bg-neutral-20" />
-
-            <Button className={"h-full!"}>Sign Up</Button>
+          {/* Right: Desktop Auth Buttons */}
+          <div className="hidden lg:flex items-center gap-4">
+            <Button showBgColor={false} className="text-primary font-bold">
+              Login
+            </Button>
+            <div className="h-6 w-px bg-neutral-20" />
+            <Button>Sign Up</Button>
           </div>
+
+          {/* Mobile Menu Toggle Button */}
+          <button
+            className="lg:hidden p-2 border-2 border-neutral-20 rounded-full text-neutral-100"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <IconX size={20} /> : <IconMenu2 size={20} />}
+          </button>
         </nav>
+
+        {/* Mobile Dropdown Menu */}
+        <div
+          className={`
+          lg:hidden absolute top-full left-0 w-full bg-white border-b border-neutral-20 transition-all duration-300 ease-in-out overflow-hidden
+          ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}
+        `}
+        >
+          <div className="flex flex-col p-6 gap-6">
+            <Link
+              href="#"
+              className="text-body-18 font-medium text-neutral-80"
+              onClick={() => setIsOpen(false)}
+            >
+              Find Jobs
+            </Link>
+            <Link
+              href="#"
+              className="text-body-18 font-medium text-neutral-80"
+              onClick={() => setIsOpen(false)}
+            >
+              Browse Companies
+            </Link>
+            <hr className="border-neutral-20" />
+            <div className="flex flex-col gap-4">
+              <Button showBgColor={false} className="w-full justify-center">
+                Login
+              </Button>
+              <Button className="w-full justify-center">Sign Up</Button>
+            </div>
+          </div>
+        </div>
       </Container>
-    </div>
+    </header>
   );
 };
 

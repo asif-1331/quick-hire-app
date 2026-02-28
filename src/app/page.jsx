@@ -10,14 +10,14 @@ import SignUpSection from "@/components/page/home/SignUpSection";
 export default function Page() {
   return (
     <main>
-      {/* <Navbar /> */}
+      <Navbar />
       <HeroSection />
       <CompanyGrownSection />
       <CategoriesSection />
       <SignUpSection />
       <FeaturedJobs />
       <LatestJobOpens />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }
