@@ -23,7 +23,13 @@
   body {
     font-family: var(--font-epilogue), ui-sans-serif, system-ui;
   }
+
+  .hero-clip {
+  /* This creates a path: top-left, top-right, bottom-right, bottom-left */
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
+}
+
 
 
 @utility text-heading-1 {
