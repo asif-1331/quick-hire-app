@@ -30,11 +30,13 @@ const Footer = () => {
         <div className="flex flex-col xl:flex-row gap-22 items-start">
           {/* Footer Text */}
           <div className="max-w-[376px]">
-            <Image
-              src={MainLogo}
-              className="w-[120px] lg:w-[152px]"
-              alt="QuickHire"
-            />
+            <Link href="#">
+              <Image
+                src={MainLogo}
+                className="w-[120px] lg:w-[152px]"
+                alt="QuickHire"
+              />
+            </Link>
             <p className="text-body-16 text-neutral-20 pt-8">
               Great platform for the job seeker that passionate about startups.
               Find your dream job easier.

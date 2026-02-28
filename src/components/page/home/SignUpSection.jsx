@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 import ProductDashboard from "../../../assets/imgs/dashboard-img.png";
+import Link from "next/link";
 
 const SignUpSection = () => {
   return (
@@ -22,7 +23,7 @@ const SignUpSection = () => {
               "bg-white! text-primary! lg:inline-flex! flex! lg:w-auto w-full items-center justify-center"
             }
           >
-            Sign Up For Free
+            <Link href="/auth/sign-up">Sign Up For Free</Link>
           </Button>
         </div>
 
