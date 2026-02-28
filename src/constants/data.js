@@ -22,6 +22,17 @@ import CompanyLogo6 from "../assets/imgs/featured-jobs/company-logo-6.png";
 import CompanyLogo7 from "../assets/imgs/featured-jobs/company-logo-7.png";
 import CompanyLogo8 from "../assets/imgs/featured-jobs/company-logo-8.png";
 
+import Facebook from "../assets/icons/Facebook.png";
+import Dribbble from "../assets/icons/Dribbble.png";
+import Instagram from "../assets/icons/Instagram.png";
+import LinkedIn from "../assets/icons/LinkedIn.png";
+import Twitter from "../assets/icons/Twitter.png";
+
+// --------------------- SOCIALS
+export const socialLogos = [Facebook, Instagram, Dribbble, LinkedIn, Twitter];
+
+// --------------------- JOB CATEGORIES
+
 export const companies = [Company1, Company2, Company3, Company4, Company5];
 
 // --------------------- JOB CATEGORIES

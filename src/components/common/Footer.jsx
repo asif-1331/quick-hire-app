@@ -5,16 +5,12 @@ import Link from "next/link";
 
 // Image
 import MainLogo from "../../assets/imgs/Logo-white.png";
-import Facebook from "../../assets/icons/Facebook.png";
-import Dribbble from "../../assets/icons/Dribbble.png";
-import Instagram from "../../assets/icons/Instagram.png";
-import LinkedIn from "../../assets/icons/LinkedIn.png";
-import Twitter from "../../assets/icons/Twitter.png";
+
 import Input from "../ui/Input";
 import Button from "../ui/Button";
+import { socialLogos } from "@/constants/data";
 
 const Footer = () => {
-  const socialLogos = [Facebook, Instagram, Dribbble, LinkedIn, Twitter];
   const aboutLinks = [
     { name: "Companies", link: "#" },
     { name: "Pricing", link: "#" },
@@ -31,10 +27,14 @@ const Footer = () => {
   return (
     <div className="bg-black pt-16 pb-10">
       <Container>
-        <div className="flex gap-22 items-start">
+        <div className="flex flex-col xl:flex-row gap-22 items-start">
           {/* Footer Text */}
           <div className="max-w-[376px]">
-            <Image src={MainLogo} className="lg:w-[152px]" alt="" />
+            <Image
+              src={MainLogo}
+              className="w-[120px] lg:w-[152px]"
+              alt="QuickHire"
+            />
             <p className="text-body-16 text-neutral-20 pt-8">
               Great platform for the job seeker that passionate about startups.
               Find your dream job easier.
@@ -42,9 +42,9 @@ const Footer = () => {
           </div>
 
           {/* Other Links */}
-          <div className="flex items-start gap-[71px] w-full">
+          <div className="flex flex-col md:flex-row items-start lg:gap-[71px] gap-6 w-full">
             {/* Links */}
-            <div className="flex items-start w-full justify-between">
+            <div className="grid grid-cols-2 w-full">
               <div>
                 <h4 className="text-lg pb-4.5 text-white font-sans font-semibold leading-[1.6]">
                   About
@@ -87,38 +87,39 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            {/* Notification */}
-            <div className="min-w-[300px]">
+
+            {/* Newsletter Column */}
+            <div className="w-full sm:min-w-[280px]">
               <h5 className="text-body-18 font-semibold pb-4.5 text-white">
                 Get job notifications
               </h5>
-              <p className="text-body-16 pb-10 text-neutral-20">
+              <p className="text-body-16 pb-6 text-neutral-20">
                 The latest job news, articles, sent to your inbox weekly.
               </p>
-
-              <div className="flex items-center gap-2">
-                <Input />
-                <Button>Subscribe</Button>
+              <div className="flex flex-col xl:flex-row items-stretch xl:items-center gap-2">
+                <Input className="w-full bg-neutral-90 border-neutral-80 text-white" />
+                <div>
+                  <Button>Subscribe</Button>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Copyright and social */}
-        <div className="flex justify-between items-center pt-10 mt-20 border-t border-white/10">
+        {/* Bottom Bar: Copyright & Social */}
+        <div className="flex flex-col md:flex-row justify-between items-center md:pt-10 pt-6 md:mt-20 mt-6 border-t border-white/10 gap-6 text-center md:text-left">
           <p className="text-body-16 text-neutral-40">
             2021 @ QuickHire. All rights reserved.
           </p>
 
-          {/* Social Links */}
           <div className="flex gap-6 items-center">
             {socialLogos?.map((logo, index) => (
               <Link
                 key={index}
-                href={"#"}
-                className="cursor-pointer w-8 h-8 inline-block hover:opacity-85 transition-all duration-150 ease-in"
+                href="#"
+                className="w-8 h-8 hover:opacity-70 transition-opacity"
               >
-                <Image src={logo} alt="" />
+                <Image src={logo} alt="social icon" width={32} height={32} />
               </Link>
             ))}
           </div>
