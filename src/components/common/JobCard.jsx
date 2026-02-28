@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { hexToRGBA } from "@/utils/helper";
 
 const JobCard = ({ data }) => {
   return (
@@ -35,11 +36,15 @@ const JobCard = ({ data }) => {
           </p>
 
           {/* Bottom Section: Tags */}
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             {data?.categories?.map((item, index) => (
               <span
                 key={index}
-                className={`px-4 py-1.5 rounded-full text-body-14 font-medium bg-[${item.color}]/50 text-[${item.color}]`}
+                className="px-4 py-1.5 text-body-14 rounded-full font-medium"
+                style={{
+                  backgroundColor: hexToRGBA(item.color, 0.1), // 10% looks better for "tint", but 0.5 as requested
+                  color: item.color,
+                }}
               >
                 {item.name}
               </span>

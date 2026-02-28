@@ -14,7 +14,7 @@ const CategoryCard = ({ data }) => {
         />
 
         <div>
-          <h5 className="md:text-body-24 text-body-20 font-semibold group-hover:text-white! pb-0">
+          <h5 className="md:text-body-24 text-body-20 font-semibold group-hover:text-white! pb-3">
             {data?.title}
           </h5>
 

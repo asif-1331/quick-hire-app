@@ -11,7 +11,7 @@ import HeroBgPattern from "../../../assets/imgs/hero-bg-pattern.png";
 
 const LatestJobOpens = () => {
   return (
-    <div className="bg-[#F8F8FD] relative">
+    <div className="bg-[#F8F8FD] relative [clip-path:polygon(12%_0%,_100%_0%,_100%_100%,_0%_100%,_0%_12%)]">
       <Container className={"relative"}>
         <section className="lg:py-18 md:py-12 pt-24 pb-10 relative z-50">
           <SectionTitle
