@@ -6,11 +6,10 @@ import HeroSection from "@/components/page/home/HeroSection";
 export default function Page() {
   return (
     <main>
-      <Navbar />
-      <Container>
-        <HeroSection />
-      </Container>
-      <Footer />
+      {/* <Navbar /> */}
+      <HeroSection />
+      <Container></Container>
+      {/* <Footer /> */}
     </main>
   );
 }
